@@ -1,20 +1,6 @@
 # Percepta-PBL-
 
-Perfect. This README needs to look:
 
-🔥 Professional
-
-🧠 Research-oriented
-
-💻 Technical
-
-📄 Publish-ready
-
-🚀 Visionary
-
-Below is a clean, strong, GitHub-ready README for Percepta.
-
-You can copy-paste this directly into README.md.
 
 🧠 Percepta
 Implementation of a Perceptual Computing Interface (PCI)
