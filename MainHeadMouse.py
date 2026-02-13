@@ -2,13 +2,13 @@ import cv2
 import numpy as np
 import pyautogui
 
-# Screen size
+
 screen_w, screen_h = pyautogui.size()
 
-# Sensitivity constant (PLAY WITH THIS)
-k_head = 2.5
 
-# Load face cascade
+k_head = 3
+
+
 face_cascade = cv2.CascadeClassifier(cv2.data.haarcascades + "haarcascade_frontalface_default.xml")
 
 cap = cv2.VideoCapture(0)
@@ -37,13 +37,13 @@ while True:
 
         if prev_nose is not None:
 
-            # ---------------- MATHEMATICS START ----------------
-            dx = nose_x - prev_nose[0]      # displacement in x
-            dy = nose_y - prev_nose[1]      # displacement in y
+            
+            dx = nose_x - prev_nose[0]      
+            dy = nose_y - prev_nose[1]      
 
-            move_x = k_head * dx            # scaling by sensitivity constant
-            move_y = k_head * dy            # scaling by sensitivity constant
-            # ---------------- MATHEMATICS END ----------------
+            move_x = k_head * dx           
+            move_y = k_head * dy            
+        
 
             current_mouse_x, current_mouse_y = pyautogui.position()
 
@@ -56,7 +56,7 @@ while True:
 
         prev_nose = (nose_x, nose_y)
 
-    # Resize webcam window
+   
     small_frame = cv2.resize(frame, (320, 240))
 
     cv2.imshow("Percepta Head Tracking", small_frame)
